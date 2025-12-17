@@ -1,0 +1,100 @@
+/* the 100vh and 100vw set the size of the body to fill the viewport (screen) */
+body {
+  height: 100vh;
+  width: 100vw;
+  display: block;
+  margin: 0;
+}
+/* build your layout */
+.top-row {
+  height: 35%;
+  width: 100%;
+  display: flex;
+}
+.bottom-row {
+  height: 65%;
+  width: 100%;
+}
+.square {
+  height: 100%;
+  width: 25%;
+  
+}
+.gone {
+  display: none;
+}
+/* this will make ALL <img> elements at most 100% of their PARENT! */
+img {
+  max-height: 100%;
+  max-width: 100%;
+}
+/* this class goes on the PARENT div of the image! */
+.center-content {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.translucent {
+  opacity: 0.5;
+}
+
+/* colors to see divs */
+.red {
+  background-color: #e30202;
+}
+.green {
+  background-color: #85e21f;
+}
+.orange {
+  background-color: #da6339;
+}
+.purple {
+  background-color: #a447d3;
+}
+.yellow {
+  background-color: #fcc500;
+}
+.black {
+  background-color: #000000;
+}
+.slate {
+  background-color: #1e171f;
+}
+.dark-grey {
+  background-color: #3a3b3c;
+}
+.light-grey {
+  background-color: #d3d3d3;
+}
+.blue {
+  background-color: #0011fc;
+}
+.white {
+  background-color: #e1e1e1;
+}
+/* enhance the UX */
+/*
+img:hover {
+  cursor: pointer;
+}
+img:active {
+  transform: scale(0.95);
+}
+*/
+/* MOBILE LAYOUT */
+@media (max-width: 600px) {
+  .top-row {
+    /* still full width, but now the squares can wrap */
+    display: flex;
+    flex-wrap: wrap;
+    height: 50%;   /* top half of the screen */
+  }
+
+  .square {
+    width: 50%;    /* 2 per row instead of 4 */
+    height: 50%;   /* fill the top-row height as a 2×2 grid */
+  }
+
+  .bottom-row {
+    height: 50%;   /* bottom half (the big black block) */
+  }

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>At least its over</title>
+  </head>
+  <body>
+    <div class="top-row light-grey center-content">
+      <div class="square yellow" id="firstsquare">
+        <img src="images/george1.png" id="george1" onclick="firstfunction()" />
+      </div>
+      <div class="square green center-content" id="secondsquare">
+        <img src="images/john1.png" id="john1" onclick="secondfunction()" />
+      </div>
+      <div class="square red center-content" id="thirdsquare">
+        <img src="images/paul1.png" id="paul1" onclick="thirdfunction()" />
+      </div>
+      <div class="square purple center-content" id="fourthsquare">
+        <img src="images/ringo1.png" id="ringo1" onclick="fourthfunction()" />
+      </div>
+    </div>
+    <div class="bottom-row black center-content" style="flex-direction: column">
+      <!-- Beatles Logo (clickable) -->
+      <img src="images/the be.png" id="beatlesLogo" onclick="playVideo()" />
+
+      <!-- Hidden video container -->
+      <div id="video-container" class="gone">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/NCtzkaL2t_Y"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        >
+        </iframe>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
